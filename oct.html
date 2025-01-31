@@ -15,10 +15,38 @@ if( choice == "nuclear plant") {
     }
    
     if (choice2=="batman"){
-        alert(" As Batman sneaks across the roof of the nuclear plant, he ends up slipping through a misplaced ceiling panel. Falling through he lands in a container, The roof closes above him and out of nowhere. A chicken swirls his seat outside of the container Stroking a chicken. And all the sudden Batman realizes it was a gas chamber Batman dies, the chicken watches the nuke The world ends. the end. ")
-    }
+        alert(" As Batman sneaks across the roof of the nuclear plant, he ends up slipping through a misplaced ceiling panel. Falling through he lands in a container, The roof closes above him and out of nowhere. A chicken swirls his seat outside of the container Stroking a chicken. And all the sudden Batman realizes it was a gas chamber.")
+    
+        let choice13=prompt("he feels his pockets in panic, he finds a gas mask (put it on, or ignore it)")
 
-    if(choice2=="flash"){
+        if(choice13=="ignore it"){
+            alert("Batman dies, the chicken launches the nuke and The world ends, the end. ")
+        }
+        if(choice13=="put it on"){
+            alert("In a hurry Batman puts on the mask. Then he throws a batarang at the window to put a crack in it then he charges through the window. As he regains awareness the chicken is no longer there.")
+
+            let choice14=prompt("Where should he look?(next to the nukes, or control center)")
+
+            if(choice14=="next to the nukes"){
+                alert(" Batman walks besides the nukes as he sees the glass window  That separates the control center and the nukes. He sees the chicken there. Slamming his wing on the launch button, The nukes launch the world ends, the end.")
+            }
+            if(choice14=="control center"){
+
+                let choice15=prompt(" you open the door Unnotest(go invisible, uppercut, or punch face")
+
+                if(choice15=="go invisible"){
+                    alert("As batman sneaks up on the chicken he finds a Wrestling ring in the back corner of the control center, so batman jumps up on the edge of the ring then jumps in the air elbow pointing out at the chicken shouting john cena, as he crushes the chicken beneath his elbow Batman stops the nukes and then mounts the chicken. You win")
+                }
+                if(choice15=="uppercut"){
+                    alert("Batman uppercuts the chicken. This knocks him out immediately. Batman walks away to stop the nukes, he stops them and the world is saved. YOU WIN")
+                }
+                if (choice15=="punch face"){
+                    alert("As Batman runs up to punch the chicken, the chicken grabs his fist rotating it. His wrist snaps. He screams in his anger as he goes off on the chicken. As he finishes fighting him. He limps away slowly to stop the launch. But, the chicken surprises him by shooting him with a bazooka, killing him. This results in the chicken launching the nukes. THE END")
+                }
+            }
+        }
+    }
+     if(choice2=="flash"){
         alert (" As the flash was running to save the day, to stop the chicken. He stubs his toe on an anvil.")
        
         let choice3 = prompt("what should he do with it?(use it, or ignore it)")
