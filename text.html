@@ -276,44 +276,60 @@
 
     class SceneDoor extends Scene {
       onEnter() {
-        print(StoryText(`select a game [global thermonuclear war, duty calls, or 90 DEGREES THE GAME]`))
+        print(StoryText(`shall we play a game? [global thermonuclear war, duty calls, or 90 DEGREES THE GAME]`))
       }
 
       onInput(text) {
         let negate = countOdd(text, "no", "not", "dont", "don't", "didnt", "didn't", "never")
-        let enter  = choiceIncludesAny(text, "90 degrees the game")//die
-        let leave  = choiceIncludesAny(text, "global thermonuclear war")//quit
+        let enter  = choiceIncludesAny(text, "90 degrees the game")
+        let leave  = choiceIncludesAny(text, "global thermonuclear war")
         let game4  = choiceIncludesAny(text, "duty calls")
 
 
         if(!negate && enter) {
-          print(StoryText(`file not finished`))//die
+          print(StoryText(`file not finished. choise a diffrent file.`))
         } else if((negate && enter) || (!negate && leave)){
-          print(StoryText(`Despite your generous contract and the nearly eight weeks of travel it took you to arrive, your instinct tells you that no amount of money or effort is worth the trouble. You board your shuttle and begin your long trek home. You quit.`))//quit
-        } else if((negate && leave) || (!negate && game4)){
-          print(StoryText(`hi you`))
-          setScene(fortnite())
+          print(StoryText(`whom would you like to declare war on?`))
           setScene(new SceneEnd())
+        } else if((negate && leave) || (!negate && game4)){
+          print(StoryText(`Campaign or multiplayer`))
+          print(StoryText(`Error`))
+          print(StoryText(`try again`))
         } else {
           print(SystemText(`error 4O4 "${text}"... Please input again.`))
         }
       }
     }
 
-    class fortnite {
-      onEnter() {
-        print(StoryText(``))
-      }
-    }
+   
 
     class SceneEnd {
-      onEnter() {
-        print(StoryText(`The End`))
-      }
-
+    
       onInput(text) {
-        print(SystemText(`The story has ended and you may not advance further. Refresh the page to try again.`))
+        let ps5    = countOdd(text, "Canada", "brazil", "mexico")
+        let xbox   = choiceIncludesAny(text, "japan")
+        let phish  = choiceIncludesAny(text, "north korea")
+        let potato = choiceIncludesAny(text, "china")
+
+
+       if(!ps5 && xbox){
+         print(StoryText(`you win`))
+
+         print(SystemText(`The story has ended and you may not advance further. Refresh the page to try again.`))
+       }else if((ps5 && xbox)  || (!ps5 && phish)){
+          print(StoryText(`Right before you launch your troops the us gets nuked`))
+
+          print(SystemText(`The story has ended and you may not advance further. Refresh the page to try again.`))
+       }else if((ps5 && phish) || (!ps5 && potato)){
+          print(StoryText(`You did it, you nuked china. A year later the world crashed due to China's death. `))
+
+          print(SystemText(`The story has ended and you may not advance further. Refresh the page to try again.`))
+       }else{
+         print(SystemText(`"${text}" is to close `))
+       }
+       
       }
+     
     }
 
     setScene(new SceneStart())
