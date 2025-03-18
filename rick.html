@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            rick roll
+        </title>
+    </head>
+    <body>
+        <style>        
+            .center {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            }
+        </style>
+        <script>
+            function onClick(event){
+                let randomNumber = Math.floor(Math.random() * 2);
+
+                if(randomNumber==0){
+                    location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+                }
+                if(randomNumber==1){
+                    location.href = 'https://www.youtube.com/watch?v=cE0wfjsybIQ';
+                }
+            }
+        </script>
+    
+        <div class="center">
+            <button onclick="onClick()">hi</button>
+        </div>
+    </body>
+</html>  
