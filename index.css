@@ -2,7 +2,22 @@
     inset: 0;
     margin: 0;
     padding: 0;
+
+    --theme-prmary    : #87FF65;
+    --theme-secondary : #5A5A66;
+    --theme-accent    : #A4C2A8;
+    --theme-surface   : #2A2B2E;
+
+    --theme-prmary-content   : #2A2B2E;
+    --theme-secondary-content: #87FF65;
+    --theme-accent-content   : #5A5A66;
+    --theme-surface-content  : #A4C2A8;
+
+    color: var(--theme-surface-content);
 }
+ body{
+background-color: var(--theme-surface);
+ }
 
 .flex-row {
 display: flex;
@@ -20,6 +35,64 @@ flex-direction: column;
 
 .align-center {
     align-items: center;
+}
+
+.pfp {
+    height: 200px;
+    border-radius: 100%;
+    border: solid;
+    border-width: 1em;
+    border-color: blueviolet;
+}
+
+
+
+.bg-prmary {
+    background: var(--theme-prmary);
+}
+
+.bg-secondary {
+    background: var(--theme-secondary);
+}
+
+.bg-accent {
+    background: var(--theme-accent);
+}
+
+.bg-surface {
+    background: var(--theme-surface);
+}
+
+.text-prmary-content{
+    background: var(--theme-prmary-content);
+}
+
+.text-secondary-content{
+    background: var(--theme-secondary-content);
+}
+
+.text-accent-content {
+    background: var(--theme-accent-content);
+}
+
+.text-surface-content {
+    background: var(--theme-surface-content);
+}
+
+.text-prmary{
+    background: var(--theme-prmary);
+}
+
+.text-secondary{
+    background: var(--theme-secondary);
+}
+
+.text-accent {
+    background: var(--theme-accent);
+}
+
+.text-surface {
+    background: var(--theme-surface);
 }
 
 
