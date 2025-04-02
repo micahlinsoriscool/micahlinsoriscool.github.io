@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Wavefont:wght@4..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 * {
     inset: 0;
     margin: 0;
@@ -64,36 +67,42 @@ flex-direction: column;
 }
 
 .text-prmary-content{
-    background: var(--theme-prmary-content);
+    color: var(--theme-prmary-content);
 }
 
 .text-secondary-content{
-    background: var(--theme-secondary-content);
+    color: var(--theme-secondary-content);
 }
 
 .text-accent-content {
-    background: var(--theme-accent-content);
+    color: var(--theme-accent-content);
 }
 
 .text-surface-content {
-    background: var(--theme-surface-content);
+    color: var(--theme-surface-content);
 }
 
 .text-prmary{
-    background: var(--theme-prmary);
+    color: var(--theme-prmary);
 }
 
 .text-secondary{
-    background: var(--theme-secondary);
+    color: var(--theme-secondary);
 }
 
 .text-accent {
-    background: var(--theme-accent);
+    color: var(--theme-accent);
 }
 
 .text-surface {
-    background: var(--theme-surface);
+    color: var(--theme-surface);
 }
 
+.w-dvw{
+    width: 100dvw;
+}
 
+.h-dvh{
+    height: 100dvh;
+}
 
