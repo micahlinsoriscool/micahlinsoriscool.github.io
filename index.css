@@ -1,13 +1,128 @@
-.blue-text{
-    color: aquamarine;
+@import url('https://fonts.googleapis.com/css2?family=Wavefont:wght@4..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    inset: 0;
+    margin: 0;
+    padding: 0;
+
+    --theme-prmary    : #87FF65;
+    --theme-secondary : #5A5A66;
+    --theme-accent    : #A4C2A8;
+    --theme-surface   : #2A2B2E;
+
+    --theme-prmary-content   : #2A2B2E;
+    --theme-secondary-content: #87FF65;
+    --theme-accent-content   : #5A5A66;
+    --theme-surface-content  : #A4C2A8;
+
+    color: var(--theme-surface-content);
+}
+ body{
+background-color: var(--theme-surface);
+ }
+
+.flex-row {
+display: flex;
+flex-direction: row;
 }
 
-.phish{
-    width: 100%;
-    height: 100;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.flex-col {
+display: flex;
+flex-direction: column;
+}
 
-    background-color: brown;
+.justify-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.pfp {
+    height: 200px;
+    border-radius: 100%;
+    border: solid;
+    border-width: 1em;
+    border-color: blueviolet;
+}
+
+
+
+.bg-prmary {
+    background: var(--theme-prmary);
+}
+
+.bg-secondary {
+    background: var(--theme-secondary);
+}
+
+.bg-accent {
+    background: var(--theme-accent);
+}
+
+.bg-surface {
+    background: var(--theme-surface);
+}
+
+.text-prmary-content{
+    color: var(--theme-prmary-content);
+}
+
+.text-secondary-content{
+    color: var(--theme-secondary-content);
+}
+
+.text-accent-content {
+    color: var(--theme-accent-content);
+}
+
+.text-surface-content {
+    color: var(--theme-surface-content);
+}
+
+.text-prmary{
+    color: var(--theme-prmary);
+}
+
+.text-secondary{
+    color: var(--theme-secondary);
+}
+
+.text-accent {
+    color: var(--theme-accent);
+}
+
+.text-surface {
+    color: var(--theme-surface);
+}
+
+.w-dvw{
+    width: 100dvw;
+}
+
+.h-dvh{
+    height: 100dvh;
+}
+
+.name{
+    font-family: "Lobster Two";
+    font-size: 90px;
+}
+.nav{
+display: flex;
+flex-direction: column;
+}
+.nav a{
+color: var(--theme-accent);
+text-decoration: none;
+font-size: 1.5em;
+font-family:"Wavefont";
+padding: 2px;
+border-radius: 1em;
+}
+.nav a:hover {
+color: var(--theme-accent-content);
+background: var(--theme-accent);
 }
