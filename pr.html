@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="stylesheet" href="./index.css">
+    <title>micah linser</title>
+</head>
+
+<body>
+    <div class="flex-col justify-center align-center w-dvw h-dvh"> 
+        <h1>Micah Linser projects</h1>
+        
+        <div class="projects">
+            <a class="project" href="https://micahlinsoriscool.github.io/Phish">GitHub</a>
+            <span class="project-title">hi</span>
+            <span class="project-description">this is hi</span>
+        </div>
+    </div>
+
+<style>
+    .projects {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .project {
+        display: flex;
+        flex-direction: column;
+        max-width: 300px;
+        background: var(--theme-primary);
+        border-radius: 1em;
+        padding: 1em;
+    }
+    .project:hover, .project:hover * {
+        background: var(--theme-secondary);
+        color: var(--theme-primary-content);
+
+    }
+    .project-title {
+        font-size: 1em;
+        font-weight: bold;
+        text-align: center;
+    }
+    .project-description {
+        font-size: 1em;
+        text-align: center;
+        font-style: italic;
+
+    }
+</style>
+</body>
+
+</html>
