@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.5/lib/p5.min.js"></script>
+    <title>by</title>
+</head>
+<body>
+    <script>
+        function setup() {
+  createCanvas(1500, 700);
+}
+let x = 230;
+let y = 230;
+let vy = 10;
+let vx = 9;
+
+
+function draw() {
+ background(220);
+
+ smile(x,y);
+  
+  x = x + vx;
+  y = y + vy;
+
+  if (x < 32) {
+    vx = vx * -1;
+  }
+  if (y < 40) {
+    vy = vy * -1;
+  }
+  if (x > 1428) {
+    vx = vx * -1;
+  }
+  if (y > 668) {
+    vy = vy * -1;
+  }
+
+}
+
+  function smile(x, y, s = 1) {
+  translate(x, y);
+  scale(s);
+
+  fill("maroon");
+  circle(0, 0, 64);
+
+  fill("");
+  circle(-15, -5, 8);
+  circle(+15, -5, 8);
+
+  noFill();
+  strokeWeight(4);
+  arc(0, 0, 44, 44, PI / 8, (7 * PI) / 8);
+
+  scale(1 / s);
+  translate(-x, -y);
+}
+
+    </script>
+    <p> I started out by realizing that one of our previous projects was making a circle bounce around on P5JS. So what I did is I opened up the P5JS and found the code to make a circle bounce around, then I went into the HTML page and then pasted it. Put this script in between Javascript tags, and then searched around on Google for the Pacific way to change HTML from reading JavaScript to reading P5JS then I adjusted the borders So the circle would  Use almost all of the page. I'm gonna hope you can save my work.
+    </p>
+</body>
+
+
+</html>
